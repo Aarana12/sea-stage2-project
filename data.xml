@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <book>
+        <id>1</id>
+        <cover>https://m.media-amazon.com/images/I/71KcUgYanhL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Seven Husbands of Evelyn Hugo</title>
+        <author>Taylor Jenkins Reid</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>2</id>
+        <cover>https://m.media-amazon.com/images/I/81WUAoL-wFL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Lord of the Flies</title>
+        <author>William Golding</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>3</id>
+        <cover>https://m.media-amazon.com/images/I/81tZufOGaZL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Red Rising</title>
+        <author>Pierce Brown</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>4</id>
+        <cover>https://m.media-amazon.com/images/I/81+IUsYtGTL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Ender's Game</title>
+        <author>Orson Scott Card</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>5</id>
+        <cover>https://m.media-amazon.com/images/I/81RvGjUWqlL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>How Not to Die</title>
+        <author>Micheal Greger, M.D.</author>
+        <genre>Nonfiction</genre>
+    </book>
+    <book>
+        <id>6</id>
+        <cover>https://m.media-amazon.com/images/I/61TcHQcfdRL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Sleep: The Myth of 8 Hours, the Power of Naps, and the New Plan to Recharge Your Body and Mind</title>
+        <author>Nick Littlehales</author>
+        <genre>Nonfiction</genre>
+    </book>
+    <book>
+        <id>7</id>
+        <cover>https://m.media-amazon.com/images/I/71m9+raHlzL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Masa: Techniques, Recipes, and Reflections on a Timeless Staple</title>
+        <author>Jorge Gaviria</author>
+        <genre>Nonfiction</genre>
+    </book>
+    <book>
+        <id>8</id>
+        <cover>https://m.media-amazon.com/images/I/41bUejgzjqL.jpg</cover>
+        <title>Oh Snap! You Can Use Snapchat for Business</title>
+        <author>Kate Talbot</author>
+        <genre>Nonfiction</genre>
+    </book>
+    <book>
+        <id>9</id>
+        <cover>https://m.media-amazon.com/images/I/81cJTmFpG-L._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Becoming</title>
+        <author>Michelle Obama</author>
+        <genre>Nonfiction</genre>
+    </book>
+    <book>
+        <id>10</id>
+        <cover>https://m.media-amazon.com/images/I/71OZY035QKL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>The Little Prince</title>
+        <author>Antoine De Saint-Exupery</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>11</id>
+        <cover>https://m.media-amazon.com/images/I/81mmJ2ZOz4L._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Batman #24 DC Comics The New 52! Vol.2</title>
+        <author>DC Comics, Scott Snyder</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>12</id>
+        <cover>https://m.media-amazon.com/images/I/81yLptkZGbL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Piranesi</title>
+        <author>Susana Clark</author>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <id>13</id>
+        <cover>https://m.media-amazon.com/images/I/81qw536KddL._AC_UF1000,1000_QL80_.jpg</cover>
+        <title>Pachinko</title>
+        <author>Min Jin Lee</author>
+        <genre>Fiction</genre>
+    </book>
