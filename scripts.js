@@ -25,7 +25,6 @@ class AVLBinarySearchTree {
     }
 
     insertNode(bookNode, newBookNode) {
-        console.log(newBookNode.value);
         if(newBookNode.value < bookNode.value) {
             if (bookNode.left === null)
                 bookNode.left = newBookNode;
@@ -64,13 +63,12 @@ class AVLBinarySearchTree {
     }
     inOrderSearch(root, title, childBooks)
     {
- 
         if(root === null)
             return;
-        inOrderSearch(root.left, title, childBooks);
-        if (toLowerCase(root.title).includes(toLowerCase(title)) )
+        this.inOrderSearch(root.left, title, childBooks);
+        if (root.title.toLowerCase().includes(title.toLowerCase()) )
                 childBooks.add(root);
-        inOrderSearch(root.right, title, childBooks);    
+        this.inOrderSearch(root.right, title, childBooks);    
     }
 
 }
@@ -89,49 +87,36 @@ function showCards(titles, images, authors, genres) {
 function showSearchedCard() {
     let titleSearch = document.getElementById("searchBookCatalog");
 
+    let childBooks  = new Set();
     if (titleSearch != null)
-        console.log("Searched for " + titleSearch.value);
-
-    
-    
-    //var getSearchedBook = BookCatalog.search(BookCatalog.root, titleSearch.value);
+        {
+            childBooks.clear();
+            console.log(childBooks.size);
+            console.log("Searched for " + titleSearch.value);
+        }
+        
 
     //Above, the search is looked for and the result, getSearchedbBook holds the root. It is a tree node
     // I want to make an array here that is gonna hold all the tree nodes
 
-    let childBooks  = new Set();
-    BookCatalog.inOrderSearch(BookCatalog.root, titleSearch.value, childBooks);
-    childBooks.forEach(bookValue)
-    {
- 
-        const templateCard = document.querySelector(".bookCard");
-        const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editSearchedCardContent(nextCard, bookValue); // Edit title and image
-        cardContainer.appendChild(nextCard); // Add new card to the container
-    }
     
-
-
+    BookCatalog.inOrderSearch(BookCatalog.root, titleSearch.value, childBooks);
+    
     const cardContainer = document.querySelector(".CatalogContainerClass");
     var seeAllButton = document.querySelector(".seeAllButton");
     seeAllButton.style.display = "block";
     cardContainer.innerHTML = "";
+    console.log(childBooks.size);
 
-    if (getSearchedBook === null) 
-        {      
-        var searchBookAlert = document.querySelector("#searchBookAlert");
-        searchBookAlert.style.display = "block";
-        cardContainer.appendChild(searchBookAlert);
-        return;
-    }
-    else {
+    childBooks.forEach (function(bookValue)
+    {
         const templateCard = document.querySelector(".bookCard");
         const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editSearchedCardContent(nextCard, getSearchedBook); // Edit title and image
+        editSearchedCardContent(nextCard, bookValue); // Edit title and image
         cardContainer.appendChild(nextCard); // Add new card to the container
-    }
-    
-}
+    })
+    //childBooks.clear();
+};
 
 //eventually sort the order the card by different values accroding to the options i give them through the search
 function editCardContent(card, title, image, author, genre) {
