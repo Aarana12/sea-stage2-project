@@ -115,7 +115,7 @@ function showSearchedCard() {
         editSearchedCardContent(nextCard, bookValue); // Edit title and image
         cardContainer.appendChild(nextCard); // Add new card to the container
     })
-    //childBooks.clear();
+
 };
 
 //eventually sort the order the card by different values accroding to the options i give them through the search
