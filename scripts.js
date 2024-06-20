@@ -62,6 +62,17 @@ class AVLBinarySearchTree {
         else
             return root;
     }
+    inOrderSearch(root, title, childBooks)
+    {
+ 
+        if(root === null)
+            return;
+        inOrderSearch(root.left, title, childBooks);
+        if (toLowerCase(root.title).includes(toLowerCase(title)) )
+                childBooks.add(root);
+        inOrderSearch(root.right, title, childBooks);    
+    }
+
 }
 
 var BookCatalog = new AVLBinarySearchTree();
@@ -77,12 +88,37 @@ function showCards(titles, images, authors, genres) {
 
 function showSearchedCard() {
     let titleSearch = document.getElementById("searchBookCatalog");
-    var getSearchedBook = BookCatalog.search(BookCatalog.root, titleSearch.value);
+
+    if (titleSearch != null)
+        console.log("Searched for " + titleSearch.value);
+
+    
+    
+    //var getSearchedBook = BookCatalog.search(BookCatalog.root, titleSearch.value);
+
+    //Above, the search is looked for and the result, getSearchedbBook holds the root. It is a tree node
+    // I want to make an array here that is gonna hold all the tree nodes
+
+    let childBooks  = new Set();
+    BookCatalog.inOrderSearch(BookCatalog.root, titleSearch.value, childBooks);
+    childBooks.forEach(bookValue)
+    {
+ 
+        const templateCard = document.querySelector(".bookCard");
+        const nextCard = templateCard.cloneNode(true); // Copy the template card
+        editSearchedCardContent(nextCard, bookValue); // Edit title and image
+        cardContainer.appendChild(nextCard); // Add new card to the container
+    }
+    
+
+
     const cardContainer = document.querySelector(".CatalogContainerClass");
     var seeAllButton = document.querySelector(".seeAllButton");
     seeAllButton.style.display = "block";
     cardContainer.innerHTML = "";
-    if (getSearchedBook === null) {      
+
+    if (getSearchedBook === null) 
+        {      
         var searchBookAlert = document.querySelector("#searchBookAlert");
         searchBookAlert.style.display = "block";
         cardContainer.appendChild(searchBookAlert);
@@ -285,7 +321,10 @@ class RbBinarySearchTree {
         // if data is equal to the node data 
         // return node
         else
+        {
             return root;
+            console.log("Search Match Found");
+        }
     }
 
     /* Inorder(tree) {
